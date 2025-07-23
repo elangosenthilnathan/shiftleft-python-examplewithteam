@@ -26,11 +26,11 @@ jobs:
       with:
         shiftleft-access-token: ${{ secrets.SHIFTLEFT_ACCESS_TOKEN }}
         excludeRegex: ".*(test|Readme).*$"
-        importGitHub: false
-        verbose: false
+        importGitHub: true
+        verbose: true
         strict: false
         wait: false
-        timeout: 15m
+        timeout: 30m
           
     
 
