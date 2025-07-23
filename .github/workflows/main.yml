@@ -21,13 +21,24 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - uses: elangosenthilnathan/QwietTemplate@main
+    - name: Qwiet-AllInOne-Scan
+      uses: elangosenthilnathan/Qwiet-preZero@v0.0.2
       with:
+        # Qwiet preZero Authentication Token
         shiftleft-access-token: ${{ secrets.SHIFTLEFT_ACCESS_TOKEN }}
-        verbose: false
-        strict: false
-        wait: false
-        importGitHub: false
+        # Regex to exclude path. Eg ".*(test|Readme).*$"
+        excludeRegex: # optional, default is .*(test|Readme).*$
+        # Enable SARIF report generation and upload to GitHub Security. Accepted values: true or false
+        importGitHub: # optional, default is false
+        # Enable Verbose logging. Accepted values: true or false
+        verbose: # optional, default is false
+        # Enable strict mode. Accepted values: true or false
+        strict: # optional, default is false
+        # Enable Synchronous mode. Accepted values: true or false
+        wait: # optional, default is false
+        # Increase timeout for larger repos. Eg 30m. Default is 15m
+        timeout: # optional, default is 15m
+          
     
 
   
