@@ -30,7 +30,7 @@ jobs:
         verbose: false
         strict: false
         wait: false
-        timeout: 30m
+        timeout: 16m
           
     
 
