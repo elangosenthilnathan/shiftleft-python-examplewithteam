@@ -25,7 +25,7 @@ jobs:
       uses: elangosenthilnathan/Qwiet-preZero@main
       with:
         shiftleft-access-token: ${{ secrets.SHIFTLEFT_ACCESS_TOKEN }}
-        excludeRegex: ".*(test|Readme).*$"
+        excludeRegex: ".*(test|Readmes).*$"
         importGitHub: true
         verbose: false
         strict: false
