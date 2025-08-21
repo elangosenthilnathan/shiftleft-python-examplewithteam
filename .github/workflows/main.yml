@@ -27,7 +27,7 @@ jobs:
         shiftleft-access-token: ${{ secrets.SHIFTLEFT_ACCESS_TOKEN }}
         excludeRegex: ".*(test|Readmes).*$"
         importGitHub: false
-        verbose: false
+        verbose: true
         strict: false
         wait: true
         timeout: 30m
